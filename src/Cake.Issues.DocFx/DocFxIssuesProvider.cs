@@ -1,13 +1,12 @@
-﻿using System.Text;
-using Cake.Core;
-
-namespace Cake.Issues.DocFx
+﻿namespace Cake.Issues.DocFx
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
     using System.Runtime.Serialization.Json;
+    using System.Text;
+    using Cake.Core;
     using Cake.Core.Diagnostics;
     using Cake.Core.IO;
 
