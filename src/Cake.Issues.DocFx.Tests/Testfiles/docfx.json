@@ -1,4 +1,4 @@
-﻿{"message":"5 plug-in(s) loaded.","date_time":"2017-05-12T11:29:08.0983218Z","message_severity":"info"}
+{"message":"5 plug-in(s) loaded.","date_time":"2017-05-12T11:29:08.0983218Z","message_severity":"info"}
 {"message":"Post processor ExtractSearchIndex loaded.","date_time":"2017-05-12T11:29:08.1389323Z","message_severity":"info"}
 {"message":"No files are found with glob pattern images/**, excluding **/bin/**,**/obj/**, under directory \"c:\\Temp\\50\\repoB\"","date_time":"2017-05-12T11:29:08.1539722Z","message_severity":"info"}
 {"message":"Markdown engine is dfm","date_time":"2017-05-12T11:29:08.1730228Z","message_severity":"info"}
