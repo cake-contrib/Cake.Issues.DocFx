@@ -40,9 +40,12 @@
 
             IEnumerable<LogEntryDataContract> logFileEntries = null;
 
-            var logFileContent =
+            var logFileContent = Encoding.UTF8.GetString(this.IssueProviderSettings.LogFileContent)
+                .TrimStart('\uFEFF', '\u200B'); // remove UTF-8 BOM
+
+            logFileContent =
                 "[" +
-                    string.Join(",", Encoding.UTF8.GetString(this.IssueProviderSettings.LogFileContent).SplitLines()) +
+                    string.Join(",", logFileContent.SplitLines()) +
                 "]";
 
             using (var ms = new MemoryStream(Encoding.UTF8.GetBytes(logFileContent)))
