@@ -40,8 +40,7 @@
 
             IEnumerable<LogEntryDataContract> logFileEntries = null;
 
-            var logFileContent = Encoding.UTF8.GetString(this.IssueProviderSettings.LogFileContent)
-                .TrimStart('\uFEFF', '\u200B'); // remove UTF-8 BOM
+            var logFileContent = this.IssueProviderSettings.LogFileContent.ToStringUsingEncoding(true);
 
             logFileContent =
                 "[" +
