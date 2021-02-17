@@ -1,6 +1,6 @@
 # DocFx Issue Provider for Cake.Issues Addin
 
-This addin for the Cake Build Automation System allows you to read issues logged as warnings by MsBuild
+This addin for the Cake Build Automation System allows you to read issues logged as warnings or suggestions by DocFx
 using the [Cake Issues addin](https://github.com/cake-contrib/Cake.Issues).
 
 For more information about this add-in see the [Cake.Issues website](https://cakeissues.net)
