@@ -16,3 +16,19 @@ jobs:
   steps:
   - powershell: ./build.ps1
     displayName: 'Cake Build'
+- job: Linux
+  pool:
+    vmImage: 'ubuntu-22.04'
+  steps:
+  - task: UseDotNet@2
+    displayName: 'Use .NET Core sdk 5.0.x'
+    inputs:
+      packageType: 'sdk'
+      version: '5.0.x'  
+  - task: UseDotNet@2
+    displayName: 'Use .NET Core sdk 6.0.x'
+    inputs:
+      packageType: 'sdk'
+      version: '6.0.x'  
+  - powershell: ./build.ps1
+    displayName: 'Cake Build'
