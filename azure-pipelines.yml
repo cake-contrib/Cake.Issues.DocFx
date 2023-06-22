@@ -12,7 +12,20 @@ pr:
 jobs:
 - job: Windows
   pool:
-    vmImage: 'vs2017-win2016'
+    vmImage: 'windows-2022'
   steps:
+  - task: UseDotNet@2
+    inputs:
+      version: '3.1.x'
+    displayName: 'Install .NET Core 3.1'
+  # .NET 5 required for GitVersion
+  - task: UseDotNet@2
+    inputs:
+      version: '5.x'
+    displayName: 'Install .NET 5'
+  - task: UseDotNet@2
+    inputs:
+      version: '6.x'
+    displayName: 'Install .NET 6'
   - powershell: ./build.ps1
     displayName: 'Cake Build'
